@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore"; // <-- YENİ: Firestore için getFirestore'u içeri aktarıyoruz
 
 // Firebase web uygulamanızın yapılandırması
