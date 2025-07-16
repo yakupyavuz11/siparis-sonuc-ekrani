@@ -1,21 +1,19 @@
+// Firebase SDK'dan gerekli işlevleri içeri aktar
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // <-- YENİ: Firestore için getFirestore'u içeri aktarıyoruz
+import { getFirestore } from "firebase/firestore"; // Firestore entegrasyonu
 
-// Firebase web uygulamanızın yapılandırması
-// Firebase JS SDK v7.20.0 ve sonrası için measurementId isteğe bağlıdır
+// Firebase yapılandırması
 const firebaseConfig = {
-  apiKey: "AIzaSyDcWfKvWZdbPHb_C0z5geHOfglKEKJJtyG", // API anahtarınızı buraya yapıştırın
-  authDomain: "order-form-app-9e995.firebaseapp.com",
-  projectId: "order-form-app-9e995",
-  storageBucket: "order-form-app-9e995.firebasestorage.app",
-  messagingSenderId: "245652434400",
-  appId: "1:245652434400:web:67d3adb0b302cabd44cf85",
-  measurementId: "G-P0L4FERZXH"
+  apiKey: "AIzaSyBTCSPGFXgzXO7b3sTjniuQ9_uVrzsEKXU",
+  authDomain: "siparis-form.firebaseapp.com",
+  projectId: "siparis-form",
+  storageBucket: "siparis-form.firebasestorage.app",
+  messagingSenderId: "187236285725",
+  appId: "1:187236285725:web:d959cf149ae5b56849f5f4"
 };
 
 // Firebase uygulamasını başlat
 const app = initializeApp(firebaseConfig);
 
-// Firestore veritabanı servisini alın ve DIŞA AKTARIN
-// Bu sayede diğer dosyalardan 'db' nesnesine erişebilirsiniz.
-export const db = getFirestore(app); // <-- YENİ: db nesnesini oluşturup dışa aktarıyoruz
+// Firestore veritabanını başlat ve dışa aktar
+export const db = getFirestore(app);
